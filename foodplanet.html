@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodPlanet </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Signika', sans-serif;  
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0%;
+        }
+       
+        .content{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: url('./images/bbb.jpg');
+            background-size: cover;
+        }
+        nav{
+            position: fixed;
+            background-color: black;
+            left:20%;
+            top:0%;
+            z-index: 1;
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            padding: 2px 20px;
+            
+        }
+        li a{
+            text-decoration: none;
+            color:#ffffff;
+            font-size: 25px;
+            font-weight: bold; 
+        }
+        li a:hover{
+            color:gray;
+            text-decoration: underline;
+            text-shadow: 0.5px  0.5px white;
+        }
+        .btn{
+            padding: 4px 40px;
+            font-weight: bold;
+            font-size: 20px;
+            border:none;
+            box-shadow: 2px 2px 10px rgb(193, 191, 191);
+            margin: 10px;
+            border:2px solid white;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: #a1a2ac;
+        }
+        .logo img {
+            margin: 10px 10px;
+            width: 100px;
+            height: 100px;
+        }
+        .sec{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            color: white;
+            align-items: center;
+            padding-top: 100px;
+            margin: 0%;
+        }
+        
+        .hd{
+            margin:20px;
+            font-size:60px;
+            line-height: 0%;
+            color:white;
+        }
+        .abt{
+            padding-top: 20px;
+            padding-left:300px ;
+            padding-right: 300px;
+            padding-bottom: 150px;
+            text-align: center;
+        }
+        .sec2{
+            background-image:linear-gradient(rgb(214, 212, 212),rgba(254, 254, 254, 0.499));
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .au{
+            text-align: center;
+            display: flex;
+            color: black;
+            font-size: 30px;
+            padding-top: 50px;
+        }
+        .box img{
+            height: 300px;
+            width: 300px;
+            border-color: none;
+        }
+        .box{
+            padding: 40px;
+            margin: 20px;
+            display: flex;
+        }
+        .box:hover{
+            font-size: large;
+        }
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .menu h2{
+            font-size:30px;
+        }
+        .menu h3{
+            margin-top: 50px;
+            line-height: 0%;
+        }
+        .images{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 50px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .food img{
+           height: 200px;
+           width:200px;
+           opacity: 1;
+           transition: transform .2s;
+        }
+        .food:hover{
+            transform: scale(1.2);
+            box-shadow: 4px 4px 10px gray;
+            border: 2px solid gray;
+            border-radius: 20px;
+        }
+        .test{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+            flex-wrap: wrap;
+            transition: transform 5s;
+            background-color: whitesmoke;
+        }
+        .testi{
+            box-sizing: border-box;
+            width: 20%;
+            background-image:linear-gradient(rgba(255, 157, 0, 0.806),rgba(255, 255, 0, 0.077));           
+            height:400px;
+            border: 1px solid grey;
+            border-radius: 20px;
+            margin: 40px;
+            padding: 80px 30px;
+            box-shadow: 2px 2px 5px 5px gray;
+        }
+        .testi:hover{
+            transform: scale(1.1);
+        }
+        .galary{
+            background-image: url(./images/image.webp);
+            background-size: cover;
+        }
+        .pic img{
+            height: 300px;
+            width: 300px;
+            border: 2px solid gray;
+            border-radius: 20px;
+        }
+        .edit{
+           padding: 30px;
+        }
+        .footer{
+            background-image:url("./images/pexels.jpg");
+            background-size: cover;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .fo{
+            margin: 50px;
+            width: 25%;
+            height: 300px;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <header class="content">
+        <div class="logo">
+            <img src="./images/lg.jpg" alt="logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li class="item"><a href="#about us">About</a></li>
+                <li class="item"><a href="#m">Menu</a></li>
+                <li class="item"><a href="#testimonial">Testimonials</a></li>
+                <li class="item"><a href="#galary">Gallery</a></li>
+                <li class="item"><a href="#contacts">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div>
+            <button class="btn">Book Tabel</button>
+        </div>
+        <div class="sec">
+            <h1 class="hd"><span style="color:rgb(109, 25, 25);">Food</span><span style="color:rgb(196, 136, 17);">Planet</span></h1>
+            <h3 class="hd" style="font-size:30px;">BE CREATIVE BE BEAUTIFUL</h3>
+            <div class="abt ">
+                Welcome to FoodPlanet, where our passionate chefs weave magic in the kitchen to bring you an extraordinary dining experience. With their expertise and creativity, our culinary masters craft delectable dishes that will tantalize your taste buds and leave you craving for more. Come and indulge in the culinary artistry of our talented chefs at FoodPlanet.
+            </div>
+        </div>
+    </header>
+
+    <div class="sec2">
+        <h2 id="about us" class="au" >About Us</h2>
+        <div class="box">
+            <img src="./images/cc.jpg" alt="">
+        </div>
+        <div class="box" style="background-color: rgba(255, 166, 0, 0.139);">
+            Welcome to Food Planet, where culinary dreams come true! Step into a world of gastronomic delight and embark on a cosmic journey through flavors that will leave your taste buds orbiting in ecstasy. Get ready to indulge in an out-of-this-world dining experience where every dish is crafted with celestial precision and served with a sprinkle of stardust. Buckle up, fellow foodies, as we take you on an extraordinary voyage to explore the vast universe of delectable sensations. Brace yourselves for an intergalactic feast that will transport you to the outer reaches of gastronomy. Welcome to Food Planet, where taste knows no boundaries
+           
+        </div>
+    </div>
+
+    <div class="menu" id="m">
+        <h3 style="color: rgb(231 106 54);"> TOP FOODS</h3>
+        <h2>Our Categories</h2>
+        <div class="images">
+            <div class="food">
+                <img src="./images/pizza.png" alt="pizza"><br>Pizza
+
+            </div>
+            <div class="food">
+                <img src="./images/broast.png" alt="broast"><br>Broast
+            </div>
+            <div class="food">
+                <img src="./images/burger.png" alt="burger"><br>Burger
+            </div>
+            <div class="food">
+                <img src="./images/chicken.png" alt="chicken"><br>Chicken
+            </div>
+        </div>
+        <div class="images">
+            <div class="food">
+                <img src="./images/pasta.png" alt="past"><br>Pasts
+            </div>
+            <div class="food">
+                <img src="./images/desserts.png" alt="dessert"><br>Dessert
+            </div>
+            <div class="food">
+                <img src="./images/sandwich.png" alt="sandwich"><br>Sandwich
+            </div>
+            <div class="food">
+                <img src="./images/shakes.png" alt="shakes"><br>Shakes
+            </div>
+        </div>
+    </div>
+
+    <div class="test" >
+        <h2 class="au" id="testimonial" style="background-color: whitesmoke;">Testimonials</h2>
+        <div style="display: flex; justify-content:space-around; ">
+                <div class="testi">"I had an amazing dining experience at FoodPlanet. The food was exceptional, and the flavors were absolutely delicious. The staff was friendly and attentive, and the ambiance was perfect for a cozy evening out. I highly recommend FoodPlanet for anyone looking for a top-notch dining experience." - John D.</div>
+            <div class="testi">
+                "I can't say enough good things about FoodPlanet. The menu offers a wide variety of dishes, and everything I've tried has been outstanding. The quality of ingredients is evident in every bite, and the presentation is simply beautiful. The service is impeccable, and the staff goes above and beyond to make you feel welcome. This is definitely one of the best restaurants in town." - Sarah L.
+            </div>
+            <div class="testi">
+                "If you're a foodie, you have to try FoodPlanet. I was blown away by the innovative flavors and creative combinations in their dishes. It's evident that the chefs put a lot of thought and passion into their creations. The atmosphere is trendy and inviting, and the service is excellent. I've been to many restaurants, but FoodPlanet truly stands out." - David R.
+            </div>
+        </div>
+    </div>
+
+    <div class="menu galary" id="galary">
+        <h2 style="color: rgb(255, 254, 254);">Gallery</h2>
+        <div class="images edit">
+            <div class="food pic">
+                <img src="./images/pic2.avif" alt="photo">
+            </div>
+            <div class="food pic">
+                <img src="./images/pic3.avif" alt="photo">
+            </div>
+            <div class="food pic ">
+                <img src="./images/pic4.avif" alt="photo">
+            </div>
+        </div>
+        <div class="images edit">
+            <div class="food pic">
+                <img src="./images/pic5.avif" alt="photo">
+            </div>
+            <div class="food pic">
+                <img src="./images/pic6.jpg" alt="photo">
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer" id="contacts">
+        <div class="fo">
+           <h3>FoodPlanet</h3>
+            Serving Love On Highways Since 1995. India's Most Loved Chain Restaurents.
+        </div>
+        <div class="fo">
+            
+            <h3>Explore</h3>
+            Sidhrawali<br>
+            Neemrana<br>
+            Paota<br>
+            Alwar<br>
+            The Lal Vilas<br>
+            
+            
+        </div>
+        <div class="fo">
+        
+        <h3>Contact</h3>
+        HQ - NH 8, Delhi-Jaipur Highway,<br>
+        Sidhrawali, Haryana<br><br>
+
+        09992317800<br><br>
+
+        hello@FoodPlanet.com<br>
+
+        
+        </div>
+    </div>
+</body>
+</html>
